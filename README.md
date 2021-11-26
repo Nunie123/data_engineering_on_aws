@@ -5,22 +5,22 @@ NOTE: This book is currently incomplete. If you find errors or would like to fil
 
 ## Table of Contents
 **Introduction** (You are here) <br>
-Chapter 1: Setting Up Your Accounts
-Chapter 2: Data Warehousing with Snowflake
-Chapter 3: Infrastructure as Code with Terraform and Terragrunt
-Chapter 4: Streaming Data with Snowpipe and AWS Kinesis
-Chapter 5: Orchestrating Pipelines with Airflow and AWS MWAA
-Chapter 6: Transforming Data with DBT
-Chapter 7: Processing Data with AWS Batch
-Chapter 8: Event-Driven Pipelines with AWS Lambda and SNS
-Chapter 9: Deployment Pipelines with GitHub Actions
+Chapter 1: Setting Up Your Accounts <br>
+Chapter 2: Data Warehousing with Snowflake <br>
+Chapter 3: Infrastructure as Code with Terraform and Terragrunt <br>
+Chapter 4: Streaming Data with Snowpipe and AWS Kinesis <br>
+Chapter 5: Orchestrating Pipelines with Airflow and AWS MWAA <br>
+Chapter 6: Transforming Data with DBT <br>
+Chapter 7: Processing Data with AWS Batch <br>
+Chapter 8: Event-Driven Pipelines with AWS Lambda and SNS <br>
+Chapter 9: Deployment Pipelines with GitHub Actions <br>
 Chapter 10: Alerting with AWS CloudWatch and Airflow
 
 
 
 ---
 
-# Preface
+# Introduction
 This is a book designed to teach you how to set up and maintain a production-ready data engineering stack using [Amazon Web Services (AWS)](https://aws.amazon.com/) and [Snowflake](https://www.snowflake.com/).
 
 Other technologies we'll be using in this book include:
@@ -41,6 +41,7 @@ Other technologies we'll be using in this book include:
   * RDS
   * Kinesis
   * Secrets Manager
+  * ECR
 
 Each chapter will build on the previous chapter, setting up additional systems that rely on the systems set up in the previous chapter. By the end of the book you will have a complete Data Engineering infrastructure.
 
