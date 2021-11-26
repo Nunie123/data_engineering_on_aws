@@ -6,7 +6,7 @@ NOTE: This book is currently incomplete. If you find errors or would like to fil
 ## Table of Contents
 [Introduction](https://github.com/Nunie123/data_engineering_on_aws) <br>
 **Chapter 1: Setting Up Your Accounts** (You are here) <br>
-Chapter 2: Data Warehousing with Snowflake <br>
+[Chapter 2: Data Warehousing with Snowflake](https://github.com/Nunie123/data_engineering_on_aws/blob/main/02_data_warehousing.md) <br>
 Chapter 3: Infrastructure as Code with Terraform and Terragrunt <br>
 Chapter 4: Streaming Data with Snowpipe and AWS Kinesis <br>
 Chapter 5: Orchestrating Pipelines with Airflow and AWS MWAA <br>
@@ -15,8 +15,6 @@ Chapter 7: Processing Data with AWS Batch <br>
 Chapter 8: Event-Driven Pipelines with AWS Lambda and SNS <br>
 Chapter 9: Deployment Pipelines with GitHub Actions <br>
 Chapter 10: Alerting with AWS CloudWatch and Airflow
-
-
 
 ---
 
@@ -148,4 +146,4 @@ You can also install it through AWS' GUI installer, as described [here](https://
 
 ---
 
-Next Chapter: Chapter 2: Data Warehousing with Snowflake
+Next Chapter: [Chapter 2: Data Warehousing with Snowflake](https://github.com/Nunie123/data_engineering_on_aws/blob/main/02_data_warehousing.md)
