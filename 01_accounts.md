@@ -48,7 +48,7 @@ We aren't going to be using AWS until Chapter 3. Be sure to save your AWS login 
 
 We are going to be using Snowflake as our data warehouse. To sign up for the free trial all we need is to provide our email address. Follow the prompts here: https://www.snowflake.com/.
 
-After signing up we'll be brought to Snowflake's web console showing a few example databases pre-populated with data. We can leave this alone for now, but will be returning to this console in Chapter 2.
+After signing up we'll be brought to Snowflake's web console showing a few example databases pre-populated with data. We can leave this alone for now, but will be returning to this console in Chapter 2. Be sure to bookmark this URL, as you will need it to navigate back to your warehouse.
 
 ## Signing Up for a GitHub Account
 
