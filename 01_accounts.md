@@ -7,8 +7,8 @@ NOTE: This book is currently incomplete. If you find errors or would like to fil
 [Introduction](https://github.com/Nunie123/data_engineering_on_aws) <br>
 **Chapter 1: Setting Up Your Accounts** (You are here) <br>
 [Chapter 2: Data Warehousing with Snowflake](https://github.com/Nunie123/data_engineering_on_aws/blob/main/02_data_warehousing.md) <br>
-Chapter 3: Infrastructure as Code with Terraform and Terragrunt <br>
-Chapter 4: Streaming Data with Snowpipe and AWS Kinesis <br>
+[Chapter 3: Infrastructure as Code with Terraform and Terragrunt](https://github.com/Nunie123/data_engineering_on_aws/blob/main/03_iac.md) <br>
+[Chapter 4: Streaming Data with Snowpipe and AWS Kinesis](https://github.com/Nunie123/data_engineering_on_aws/blob/main/04_streaming.md) <br>
 Chapter 5: Orchestrating Pipelines with Airflow and AWS MWAA <br>
 Chapter 6: Transforming Data with dbt <br>
 Chapter 7: Processing Data with AWS Batch <br>
@@ -44,6 +44,14 @@ Follow the prompts here to sign up: https://aws.amazon.com/console/
 
 We aren't going to be using AWS until Chapter 3. Be sure to save your AWS login credentials for later.
 
+You now have an AWS root account, but it's best practice to create a separate user with reduced permissions for us to use:
+1. Navigate here and select "Add Users": https://console.aws.amazon.com/iamv2/home?#/users
+2. Provide a user name, select "Access key - Programmatic access", and click "Next: Permissions".
+3. Select "Attach existing policies directly", select "Administrator Access" and click "Next: Tags".
+4. Click "Next: Review".
+5. Click "Create User".
+6. You will now be displayed your AWS Access Key ID and AWS Secret Access Key. Save these, as you will need them in later chapters.
+
 ## Signing Up for a Snowflake Account
 
 We are going to be using Snowflake as our data warehouse. To sign up for the free trial all we need is to provide our email address. Follow the prompts here: https://www.snowflake.com/.
@@ -72,6 +80,8 @@ If you get a `command not found` error after executing this command, then follow
 You should receive a warning about cloning an empty repository, but don't worry about it. You now have a folder on your machine with the same name as your GitHub repository. This folder is a local git repository which is linked to your remote git repository on GitHub. In later chapters we'll be talk more about how to use git, including how to integrate it into our automated deployment pipelines.
 
 Repeat the above steps for the remaining two repositories. We should now have three git repositories on our computer linked to three remote repositories on GitHub.
+
+You will also need to set up SSH access to your GitHub account. Follow the directions [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys) to get that set up.
 
 
 ## Setting Up Your Development Environment

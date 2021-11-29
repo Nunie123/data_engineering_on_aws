@@ -7,8 +7,8 @@ NOTE: This book is currently incomplete. If you find errors or would like to fil
 **Introduction** (You are here) <br>
 [Chapter 1: Setting Up Your Accounts](https://github.com/Nunie123/data_engineering_on_aws/blob/main/01_accounts.md) <br>
 [Chapter 2: Data Warehousing with Snowflake](https://github.com/Nunie123/data_engineering_on_aws/blob/main/02_data_warehousing.md) <br>
-Chapter 3: Infrastructure as Code with Terraform and Terragrunt <br>
-Chapter 4: Streaming Data with Snowpipe and AWS Kinesis <br>
+[Chapter 3: Infrastructure as Code with Terraform and Terragrunt](https://github.com/Nunie123/data_engineering_on_aws/blob/main/03_iac.md) <br>
+[Chapter 4: Streaming Data with Snowpipe and AWS Kinesis](https://github.com/Nunie123/data_engineering_on_aws/blob/main/04_streaming.md) <br>
 Chapter 5: Orchestrating Pipelines with Airflow and AWS MWAA <br>
 Chapter 6: Transforming Data with DBT <br>
 Chapter 7: Processing Data with AWS Batch <br>

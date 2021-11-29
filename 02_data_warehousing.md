@@ -7,8 +7,8 @@ NOTE: This book is currently incomplete. If you find errors or would like to fil
 [Introduction](https://github.com/Nunie123/data_engineering_on_aws) <br>
 [Chapter 1: Setting Up Your Accounts](https://github.com/Nunie123/data_engineering_on_aws/blob/main/01_accounts.md) <br>
 **Chapter 2: Data Warehousing with Snowflake** (You are here) <br>
-Chapter 3: Infrastructure as Code with Terraform and Terragrunt <br>
-Chapter 4: Streaming Data with Snowpipe and AWS Kinesis <br>
+[Chapter 3: Infrastructure as Code with Terraform and Terragrunt](https://github.com/Nunie123/data_engineering_on_aws/blob/main/03_iac.md) <br>
+[Chapter 4: Streaming Data with Snowpipe and AWS Kinesis](https://github.com/Nunie123/data_engineering_on_aws/blob/main/04_streaming.md) <br>
 Chapter 5: Orchestrating Pipelines with Airflow and AWS MWAA <br>
 Chapter 6: Transforming Data with dbt <br>
 Chapter 7: Processing Data with AWS Batch <br>
@@ -151,7 +151,7 @@ FROM sales
 WHERE sale_date between $price_change_date and dateadd(month, 1, $price_change_date);
 ```
 
-But the current schema can't help us answer the question of when a products price changes. If we confirm that the price of a product will change, at most, once per day, then we can create our own price history table by taking daily snapshots of the `products` table. We'll go into more detail about how we will transform the data in Chapter 6. For now all we need to know is that we can get that data, so let's create a table to hold it.
+But the current schema can't help us answer the question of when a product's price changes. If we confirm that the price of a product will change, at most, once per day, then we can create our own price history table by taking daily snapshots of the `products` table. We'll go into more detail about how we will transform the data in Chapter 6. For now all we need to know is that we can get that data, so let's create a table to hold it.
 
 ``` SQL
 CREATE TABLE analytics.web_application_db.price_history (
@@ -192,7 +192,7 @@ INNER JOIN sales_before as sb
 INNER JOIN sales_after as sa
     on sa.product_id = pc.product_id;
 ```
-This query will show us the count of sales one month before and one month after the latest price change for product "1234". This table is structured as a "transaction" table, because it shows one row for every event (a price change). Another way we could have built this table is as a "snapshot" table, showing the price for every product on every day. A snapshot table will have a lot more records in it than a transaction table showing the same data, but it can also be more useful in answering certain types of questions. It's the Data Engineer's job to decide how to structure the table to be the most useful for their users.
+This query will show us the count of sales one month before and one month after the latest price change for product "1234". This new table is structured as a "transaction" table, because it shows one row for every event (a price change). Another way we could have built this table is as a "snapshot" table, showing the price for every product on every day. A snapshot table will have a lot more records in it than a transaction table showing the same data, but it can also be more useful in answering certain types of questions. It's the Data Engineer's job to decide how to structure the table to be the most useful for their users.
 
 In Chapter 6 we'll be populating these tables with data, and we can test out this query.
 
@@ -260,7 +260,7 @@ For our purposes we'll use both tables, but keep these sorts of trade-offs in mi
 
 For this query we need to:
 1. find the population of customers that have never purchased a product, and
-2. determin "how far along in the sales funnel" they got.
+2. determine "how far along in the sales funnel" they got.
 
 Finding customers who have never purchased a product is simply done using the source schema:
 ``` SQL
@@ -274,7 +274,7 @@ But we also have this phrase "how far along in the sales funnel" that doesn't ob
 2. When our business analysts talk about the sales funnel, they group customers into four stages: "viewed product", "added to cart", "began chackout", and "sale_complete".
 3. Each of these stages correspond to a specific URL pattern stored in the `page` field of the `user_sessions` table.
 
-Every time a new analyst wants to answer this question, they are going to have to repeat this interview process so they can the proper context to understand what is being asked and how to find it. Instead, let's create a table that is regularly updated and can easily provide the answer to this question:
+Every time a new analyst wants to answer this question, they are going to have to repeat this interview process so they can get the proper context to understand what is being asked and how to find it. Instead, let's create a table that is regularly updated and can easily provide the answer to this question:
 
 ``` SQL
 CREATE TABLE analytics.web_application_db.customers_without_sales (
@@ -356,4 +356,4 @@ In Chapter 4 we'll go over bringing in the data from the source system, and in C
 
 ---
 
-Next Chapter: 
+Next Chapter: [Chapter 3: Infrastructure as Code with Terraform and Terragrunt](https://github.com/Nunie123/data_engineering_on_aws/blob/main/03_iac.md) <br>
